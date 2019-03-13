@@ -79,8 +79,8 @@ public class InvoiceProducer {
 
             // Invoice ID as key
             ProducerRecord<String, Invoice> record = new ProducerRecord<String, Invoice>(TOPIC,
-                    invoice.getState(),
-                    invoice);
+                    invoice.getState(), // State is the key
+                    invoice); // actual invoice is value
             producer.send(record).get(); // get() sync wait
             System.out.println("Sent Invoice" + invoice);
             Thread.sleep(5000);

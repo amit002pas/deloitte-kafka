@@ -35,8 +35,12 @@ public class InvoiceConsumer {
         props.put(AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
         props.put(SESSION_TIMEOUT_MS_CONFIG, "30000");
 
-        props.put(GROUP_ID_CONFIG, UUID.randomUUID().toString());
-        props.put(AUTO_OFFSET_RESET_CONFIG, "earliest");
+        // How to start always from beginning
+        // give random uuid for group id
+        // the offset to earliest
+
+        //props.put(GROUP_ID_CONFIG, UUID.randomUUID().toString());
+        //props.put(AUTO_OFFSET_RESET_CONFIG, "earliest");
 
 
         // * KafkaAvroDeserializer
