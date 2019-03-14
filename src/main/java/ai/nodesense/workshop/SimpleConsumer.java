@@ -12,7 +12,7 @@ import java.util.Properties;
 import static org.apache.kafka.clients.consumer.ConsumerConfig.*;
 
 public class SimpleConsumer {
-    public static String BOOTSTRAP_SERVERS = "localhost:9092";
+    public static String BOOTSTRAP_SERVERS = "k1.nodesense.ai:9092";
     public static String TOPIC = "greetings";
 
     public static void main(String[] args) throws Exception {

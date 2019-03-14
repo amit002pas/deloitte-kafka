@@ -21,9 +21,9 @@ public class InvoiceConsumer {
     // FIXME: Always check
     //public static String SCHEMA_REGISTRY = "http://localhost:8091"; //default
     //public static String SCHEMA_REGISTRY = "http://localhost:8081"; //default
-    public static String BOOTSTRAP_SERVERS = "localhost:9092";
+    public static String BOOTSTRAP_SERVERS = "116.203.67.113:9092";
     // FIXME: Always check
-    public static String SCHEMA_REGISTRY = "http://localhost:8091"; //default
+    public static String SCHEMA_REGISTRY = "http://116.203.67.113:8081"; //default
 
     public static void main(String[] args) {
 
