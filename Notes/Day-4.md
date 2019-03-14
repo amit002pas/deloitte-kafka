@@ -290,3 +290,22 @@ Store the data into kafka/topics
         process again/forward to mysql/etc
         
         
+ Legacy 
+     XML - 10 KB
+     CSV
+     JSON
+ 
+ <person_name>Krish</person_name> 32 chars x 2 bytes = 64 bytes
+ 
+ Topic that accept XML - Give retention period very short 12 hours
+ 
+ Run Kafka Stream, run 24/7 
+   That accept message from XML Topics [10 KB]
+   Conver to Json
+   Write to Avro Topics [500 bytes]
+ 
+   Avro Topics - retention period can be higher 1 month
+ 
+ Kafka
+     Optimal size
+     Avro - 500 bytes
