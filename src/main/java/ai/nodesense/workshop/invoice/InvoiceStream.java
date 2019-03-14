@@ -38,9 +38,9 @@ import java.util.concurrent.TimeUnit;
 
 
 public class InvoiceStream {
-    static  String bootstrapServers = "localhost:9092";
+    static  String bootstrapServers = "k1.nodesense.ai:9092";
     //FIXME: chance schema url
-    static String schemaUrl = "http://localhost:8091";
+    static String schemaUrl = "http://k1.nodesense.ai:8091";
 
     public static void main(String[] args) throws  Exception {
         final Properties props = new Properties();

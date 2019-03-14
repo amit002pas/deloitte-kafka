@@ -21,16 +21,16 @@ public class InvoiceConsumer {
     // FIXME: Always check
     //public static String SCHEMA_REGISTRY = "http://localhost:8091"; //default
     //public static String SCHEMA_REGISTRY = "http://localhost:8081"; //default
-    public static String BOOTSTRAP_SERVERS = "116.203.67.113:9092";
+    public static String BOOTSTRAP_SERVERS = "k1.nodesense.ai:9092";
     // FIXME: Always check
-    public static String SCHEMA_REGISTRY = "http://116.203.67.113:8081"; //default
+    public static String SCHEMA_REGISTRY = "http://k1.nodesense.ai:8081"; //default
 
     public static void main(String[] args) {
 
 
         Properties props = new Properties();
         props.put(BOOTSTRAP_SERVERS_CONFIG, BOOTSTRAP_SERVERS);
-        props.put(GROUP_ID_CONFIG, "invoice-consumer-example"); // offset, etc, TODO
+        props.put(GROUP_ID_CONFIG, "invoice-consumer-group"); // offset, etc, TODO
         props.put(ENABLE_AUTO_COMMIT_CONFIG, "true");
         props.put(AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
         props.put(SESSION_TIMEOUT_MS_CONFIG, "30000");

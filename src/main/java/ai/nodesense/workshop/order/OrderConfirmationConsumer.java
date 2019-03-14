@@ -17,7 +17,7 @@ import static org.apache.kafka.clients.consumer.ConsumerConfig.*;
 
 public class OrderConfirmationConsumer {
 
-    public static String BOOTSTRAP_SERVERS = "localhost:9092";
+    public static String BOOTSTRAP_SERVERS = "k1.nodesense.ai:9092";
     public static String TOPIC = "order-confirmations";
 
 //    public static String BOOTSTRAP_SERVERS = "116.203.31.40:9092";
@@ -30,7 +30,7 @@ public class OrderConfirmationConsumer {
         Properties props = new Properties();
         props.put(BOOTSTRAP_SERVERS_CONFIG, BOOTSTRAP_SERVERS);
 
-        props.put(GROUP_ID_CONFIG, "orderconfirmation-consumer"); // offset, etc, TODO
+        props.put(GROUP_ID_CONFIG, "orderconfirmation-consumer-group"); // offset, etc, TODO
 
         props.put(ENABLE_AUTO_COMMIT_CONFIG, "false");
         props.put(AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");

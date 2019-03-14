@@ -45,8 +45,10 @@ public class OrderConfirmationPartitioner  implements  Partitioner  {
             partition = 0;
         } else if (country.equals(("USA"))) {
             partition = 1;
-        } else {
+        }  else if (country.equals(("UK"))) {
             partition = 2;
+        } else {
+            partition = 3;
         }
 
 

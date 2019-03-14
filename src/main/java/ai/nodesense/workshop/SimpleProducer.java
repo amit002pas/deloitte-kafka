@@ -11,7 +11,7 @@ import java.util.Properties;
 import static org.apache.kafka.clients.producer.ProducerConfig.*;
 
 public class SimpleProducer {
-    public static String BOOTSTRAP_SERVERS = "k1.nodesense.ai:9092";
+    public static String BOOTSTRAP_SERVERS = "k1.nodesense.ai:9092,";
     public static String TOPIC = "greetings";
 
 

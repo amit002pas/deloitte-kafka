@@ -19,12 +19,12 @@ import static org.apache.kafka.streams.StreamsConfig.RETRIES_CONFIG;
 public class OrderConfirmationProducer {
     //public static String BOOTSTRAP_SERVERS = "116.203.31.40:9092";
 
-    public static String BOOTSTRAP_SERVERS = "localhost:9092";
+    public static String BOOTSTRAP_SERVERS = "k1.nodesense.ai:9092";
     public static String TOPIC = "order-confirmations";
 
     static Random r = new Random();
 
-    static String countries[] = new String[]{"IN", "USA", "UK"};
+    static String countries[] = new String[]{"IN", "USA", "UK", "AU"};
 
     // generate random data
     static OrderConfirmation nextOrder() {
@@ -67,8 +67,8 @@ public class OrderConfirmationProducer {
 
         Random r = new Random();
 
-        int counter = 100;
-        for (int i = 0; i < 100; i++) {
+        int counter = 1000000;
+        for (int i = 0; i < 1000000; i++) {
             OrderConfirmation orderConfirmation = nextOrder();
             // producer record, topic, key (null), value (message)
             // send message, not waiting for ack
@@ -83,7 +83,7 @@ public class OrderConfirmationProducer {
             // during send, producer calls Serializer, convert orderconfirmation into bytes
             producer.send(record);
             System.out.printf("order send %s sent\n", record);
-            Thread.sleep(5000); // Demo only,
+            Thread.sleep(25); // Demo only,
         }
 
         producer.close();

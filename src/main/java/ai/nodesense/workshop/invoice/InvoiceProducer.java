@@ -17,9 +17,9 @@ import java.util.concurrent.ExecutionException;
 // kafka-topics --zookeeper localhost:2181 --create --topic invoices --replication-factor 1 --partitions 3
 
 public class InvoiceProducer {
-    public static String BOOTSTRAP_SERVERS = "116.203.67.113:9092";
+    public static String BOOTSTRAP_SERVERS = "k1.nodesense.ai:9092";
     // FIXME: Always check
-    public static String SCHEMA_REGISTRY = "http://116.203.67.113:8081"; //default
+    public static String SCHEMA_REGISTRY = "http://k1.nodesense.ai:8081"; //default
 
     // public static String SCHEMA_REGISTRY = "http://localhost:8081"; //default
     public static String TOPIC = "invoices";
@@ -57,7 +57,7 @@ public class InvoiceProducer {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 
-        long events = 100;
+        long events = 1000000;
 
 
         Properties props = new Properties();
@@ -83,7 +83,7 @@ public class InvoiceProducer {
                     invoice); // actual invoice is value
             producer.send(record).get(); // get() sync wait
             System.out.println("Sent Invoice" + invoice);
-            Thread.sleep(5000);
+            Thread.sleep(100);
         }
     }
 }
