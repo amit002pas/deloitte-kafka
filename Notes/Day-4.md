@@ -69,6 +69,9 @@ nano krish-mysql-product-source.json
 
 paste below 
 
+
+```json
+
 {
   "name": "krish-mysql-product-source",
   "config": {
@@ -89,6 +92,7 @@ paste below
 }
 
 
+```
 
 confluent load krish-mysql-product-source -d krish-mysql-product-source.json
 
