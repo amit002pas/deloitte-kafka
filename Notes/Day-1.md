@@ -324,3 +324,16 @@ compress, optimize, hand-shaking time
 [M1, M2, M3....]          =========>     [M1, M2, M3...]
 
 
+# With Consumer Group
+
+
+
+ 
+kafka-console-consumer --bootstrap-server localhost:9092 --topic messages --from-beginning --property print.key=true --property print.timestamp=true   --consumer-property group.id=test1
+
+
+kafka-console-consumer --bootstrap-server localhost:9092 --topic messages --from-beginning --property print.key=true --property print.timestamp=true   --consumer-property group.id=test1
+
+
+
+
