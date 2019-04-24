@@ -62,6 +62,7 @@ cd <<yourname>>
 cd krish
 
 touch krish-mysql-product-source.json
+
 touch krish-mysql-product-sink.properties
 
 
